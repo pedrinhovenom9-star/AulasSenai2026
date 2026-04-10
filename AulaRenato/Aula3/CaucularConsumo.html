@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><Canvas>Consumo Gasolina</Canvas></title>
+
+    <style>
+        div#rest {
+            width: 200px;
+            height: 200px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>Distancia <input type="number" name="txtn1" id="txtn1" /></p>
+    
+    
+    <P>Consumo <input type="number" name="txtn2" id="txtn2" /></P>
+    
+    <input type="button" value="calcular" onclick="caulcular()" />
+
+    <div id="rest">Resultado</div>
+
+
+    <script>
+        function caulcular(){
+         var n1 = window.document.getElementById('txtn1');
+         var n2 = window.document.getElementById('txtn2');
+         n1 = Number(n1.value);
+         n2 = Number(n2.value);
+         var rest = window.document.getElementById('rest');
+         var calculo = Number(n1) / Number(n2);
+         rest.innerText = 'Voce vai gastar ' + calculo + ' Litro(s)';
+
+        }
+    </script>
+</body>
+</html>

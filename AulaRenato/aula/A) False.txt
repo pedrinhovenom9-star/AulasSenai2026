@@ -1,0 +1,10 @@
+A) False
+B) True
+C) True
+D) False
+E) False
+F) True
+G) False
+K) True
+L) True
+M) False

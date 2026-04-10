@@ -1,0 +1,22 @@
+Algoritmo "Calculo de estoque médio"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Renato Onofre
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Ian Barreto Luiz
+// Data atual  : 23/02/2026
+Var
+// Seção de Declarações das variáveis
+temp,velocidade,distancia,combustivel : real
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+ escreval("Entre com o tempo que o carro precisou para chegar ao destino")
+ leia(temp)
+ escreval("Entre com a velocidade do carro")
+ leia(velocidade)
+ distancia <- (temp * velocidade)
+ combustivel <- (distancia / 12)
+ escreval("distancia percorrida:", distancia)
+ escreval("combustivel gasto:", combustivel)
+Fimalgoritmo

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Doação de Sangue</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual seu nome?');
+        var peso = Number(window.prompt('Qual seu peso?'));
+        var idade = Number(window.prompt('Qual sua idade?'));
+        var genero = window.prompt('Qual seu gênero? \n(Masculino ou Feminino)');
+        genero = genero.toUpperCase();
+
+        // if para Peso mínimo 50 E idade entre 18 e 69
+        if (peso >= 50 && (idade >= 18 && idade <= 69)) {
+            
+            if (genero === "MASCULINO") {
+                document.write(`Olá ${nome}, você deve doar 700 gramas.`);
+            } 
+            else if (genero === "FEMININO") {
+                document.write(`Olá ${nome}, você deve doar 400 gramas.`);
+            } 
+            else {
+                document.write('Gênero não identificado. Por favor, digite Masculino ou Feminino.');
+            }
+
+        } else {
+            document.write(`Lamento ${nome}, você não está apto para a doação de sangue 😢 <br/> Obrigado pela boa intenção!!!`);
+        }
+    </script>
+</body>
+</html>

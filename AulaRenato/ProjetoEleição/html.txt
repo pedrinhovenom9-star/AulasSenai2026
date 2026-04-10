@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição</title>
+    <style>
+        body { 
+        font-family: sans-serif; padding: 20px; 
+        }
+        .resultado { 
+        margin-top: 20px; font-weight: bold; color: rgb(0, 0, 0);
+         }
+        p { 
+        margin: 10px 0;
+         }
+    </style>
+</head>
+<body>
+    <h2>Calculaçao dos Votos</h2>
+    
+    <p>Candidato Lule: <input type="number" id="txtn1" value="0" /></p>
+    <p>Candidato Bolsonabo: <input type="number" id="txtn2" value="0" /></p>
+    <p>Candidato Hernesto: <input type="number" id="txtn3" value="0" /></p>
+    <p>Nulo: <input type="number" id="txtn4" value="0" /></p>
+    <p>Voto em Branco: <input type="number" id="txtn5" value="0" /></p>
+    
+    <input type="button" value="Calcular" onclick="calcular()" />
+
+    <div id="result" class="resultado">
+        <p id="totalVotos"></p>
+        <p id="porcValido"></p>
+        <p id="porcN1"></p>
+        <p id="porcN2"></p>
+        <p id="porcN3"></p>
+        <p id="porcN4"></p>
+        <p id="porcN5"></p>
+    </div>
+
+    <script>
+    function calcular() {
+        //pega os valores De txtn... e converter para número
+        var n1 = Number(document.getElementById('txtn1').value);
+        var n2 = Number(document.getElementById('txtn2').value);
+        var n3 = Number(document.getElementById('txtn3').value);
+        var n4 = Number(document.getElementById('txtn4').value);
+        var n5 = Number(document.getElementById('txtn5').value);
+
+        //Valida números negativos
+        if (n1 < 0 || n2 < 0 || n3 < 0 || n4 < 0 || n5 < 0) {
+            alert("Tem valor NEGATIVO registrado!");
+            return;
+        }
+
+        //Calculos 
+        var total = n1 + n2 + n3 + n4 + n5;
+        var validos = n1 + n2 + n3;
+
+        // Evitar divisão por zero se ninguém votou
+        if (total === 0) {
+            alert("Insira pelo menos um voto para calcular!");
+            return;
+        }
+
+        // Calculo de Porcentagens
+        var pValidos = (validos / total) * 100;
+        var pN1 = (n1 / total) * 100;
+        var pN2 = (n2 / total) * 100;
+        var pN3 = (n3 / total) * 100;
+        var pN4 = (n4 / total) * 100;
+        var pN5 = (n5 / total) * 100;
+
+        // Mostra resultados no HTML
+        document.getElementById('totalVotos').innerText = `Total de Votos: ${total}`;
+        document.getElementById('porcValido').innerText = `Total de Votos Válidos: ${pValidos.toFixed(2)}%`;
+        
+        document.getElementById('porcN1').innerText = `Lule: ${pN1.toFixed(2)}%`;
+        document.getElementById('porcN2').innerText = `Bolsonabo: ${pN2.toFixed(2)}%`;
+        document.getElementById('porcN3').innerText = `Hernesto: ${pN3.toFixed(2)}%`;
+        document.getElementById('porcN4').innerText = `Nulos: ${pN4.toFixed(2)}%`;
+        document.getElementById('porcN5').innerText = `Brancos: ${pN5.toFixed(2)}%`;
+    }
+    </script>
+</body>
+</html>

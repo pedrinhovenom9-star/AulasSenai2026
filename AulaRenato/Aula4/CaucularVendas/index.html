@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabela de Vendas</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fffafc;
+        color: #555;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #000000;
+      }
+
+      /* Estilização da Tabela */
+      .tabela-vendas {
+        width: 100%;
+        max-width: 400px;
+        border-collapse: separate; /* Permite arredondar bordas */
+        border-spacing: 0;
+        border-radius: 15px;
+        overflow: hidden; /* Garante que o fundo não saia das bordas arredondadas */
+        box-shadow: 0 4px 15px rgba(2, 2, 2, 0.2);
+        border: 2px solid #f7f7f7;
+      }
+
+      th {
+        background-color: #312628;
+        color: white;
+        padding: 15px;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 1px;
+        border: none;
+      }
+
+      td {
+        background-color: rgb(248, 248, 248);
+        padding: 12px 15px;
+        text-align: center;
+        border-bottom: 1px solid #fff0f3;
+      }
+
+      /* Efeito ao passar o mouse na linha */
+      tr:hover td {
+        background-color: #fff5f7;
+        transition: 0.3s;
+      }
+
+      /* Remove a borda da última linha para não estragar o arredondado */
+      tr:last-child td {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Total de Combos</h1>
+    <p>Tabela de preço e código:</p>
+
+    <table class="tabela-vendas">
+      <thead>
+        <tr>
+          <th>Combo</th>
+          <th>Preço Unitário</th>
+          <th>Codigo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ovo Azul / coxinha / coca cola</td>
+          <td>R$ 10,30</td>
+          <td>comb1</td>
+        </tr>
+        <tr>
+          <td>Ovo rosa / esfira / pinga</td>
+          <td>R$ 13,20</td>
+          <td>comb2</td>
+        </tr>
+        <tr>
+          <td>Ovo mole / Conhaque</td>
+          <td>R$ 9,50</td>
+          <td>comb3</td>
+        </tr>
+        <tr>
+          <td>Ovo mexido / café / pão</td>
+          <td>R$ 6,80</td>
+          <td>comb4</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <label for="codigo">Codigo:</label>
+    <input type="text" name="codigo" id="codigo" />
+
+    <label for="quantidade">Quantidades:</label>
+    <input type="number" name="quantidade" id="quantidade" />
+
+    <button onclick="CauculaVenda()" id="BntResl">Resultado</button>
+
+    <div id="resultado">Resultado:</div>
+
+    <script>
+      function CauculaVenda() {
+        var quant = Number(document.getElementById("quantidade")).Value;
+        var cod = document.getElementById("codigo");
+        switch (cod) {
+          case 0:
+            preco = "comb1";
+            break;
+          case 1:
+            preco = "comb2";
+            break;
+          case 2:
+            preco = "comb3";
+            break;
+          case 3:
+            preco = "comb4";
+            break;
+          case 4:
+            dia = "Ô meu parça, esse codigo ai não tem no meu menu não !";
+            break;
+          default:
+            break;
+        }
+
+        var result = preco * quant
+
+        resultado.innerHTML = `O total é ${result}`;
+      }
+    </script>
+  </body>
+</html>

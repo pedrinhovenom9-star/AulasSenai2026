@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background: rgb(98, 98, 167);
+        color: white;
+        font: Arial;
+      }
+    </style>
+  </head>
+
+  <body>
+     <h1>Conhecendo o DOM</h1>
+     <p>Aqui vai o resultado</p>
+     <p>Utilizando o <Strong>DOM</Strong> em JavaScript</p>
+     <div id = "msg">Clique em mim</div>
+        <script>
+             //window.document.write(window.document.URL) // Escreve direto no conteudo
+             var paragrafo = window.document.getElementsByTagName('p')[1]
+             window.document.write(paragrafo.innerText)
+             paragrafo.style.color = 'red'
+             paragrafo.style.font = 'bold 20pt times new roman'
+
+             // pegando a tag do body
+             var corpo = window.document.body
+
+             //mudando a cor da tela
+             corpo.style.background = 'pink'
+
+             /* var dv = window.document.getElementById('msg');
+             dv.style.background = 'green'
+             dv.innerText = 'Mudei de texto' 
+
+             //Manipulando pelo nome do elemento
+             var dv = window.document.getElementsByName('msg')[0]
+             dv.innerText = 'Mudei o texto novamente' 
+
+             var classe = window.document.getElementsByClassName('msg')[0]
+             classe.innerText = 'Mudei o texto novamente com classe'
+
+             var classe = window.document.querySelector('div.msg') // usa o ponto para chamar classe
+             classe.style.background = 'green' */
+
+             var d = window.document.querySelector('div#msg'); // Usa o # para camar o Id
+             d.style.background = 'yellow'
+
+
+     
+        </script>
+    </body>
+
+</html>

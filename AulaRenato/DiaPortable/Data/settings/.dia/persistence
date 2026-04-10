@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dia:persistence xmlns:dia="http://www.lysator.liu.se/~alla/dia/">
+  <dia:window role="sheets_main_dialog">
+    <dia:attribute name="xpos">
+      <dia:int val="75"/>
+    </dia:attribute>
+    <dia:attribute name="ypos">
+      <dia:int val="75"/>
+    </dia:attribute>
+    <dia:attribute name="width">
+      <dia:int val="506"/>
+    </dia:attribute>
+    <dia:attribute name="height">
+      <dia:int val="261"/>
+    </dia:attribute>
+    <dia:attribute name="isopen">
+      <dia:boolean val="false"/>
+    </dia:attribute>
+  </dia:window>
+  <dia:window role="dia-main-window">
+    <dia:attribute name="xpos">
+      <dia:int val="1"/>
+    </dia:attribute>
+    <dia:attribute name="ypos">
+      <dia:int val="1"/>
+    </dia:attribute>
+    <dia:attribute name="width">
+      <dia:int val="1902"/>
+    </dia:attribute>
+    <dia:attribute name="height">
+      <dia:int val="991"/>
+    </dia:attribute>
+    <dia:attribute name="isopen">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:window>
+  <dia:window role="diagram_tree">
+    <dia:attribute name="xpos">
+      <dia:int val="200"/>
+    </dia:attribute>
+    <dia:attribute name="ypos">
+      <dia:int val="200"/>
+    </dia:attribute>
+    <dia:attribute name="width">
+      <dia:int val="116"/>
+    </dia:attribute>
+    <dia:attribute name="height">
+      <dia:int val="50"/>
+    </dia:attribute>
+    <dia:attribute name="isopen">
+      <dia:boolean val="false"/>
+    </dia:attribute>
+  </dia:window>
+  <dia:list role="recent-files">
+    <dia:attribute name="listvalue">
+      <dia:string>#F:\Senai\REMO_2018\Disciplinas\Projeto\AplicativoBanco.dia
+E:\Senai\REMO_2018\Disciplinas\Testes\AplicacaoBancaria.dia
+C:\Users\renato.onofre\Downloads\Nicolas\Spa.dia
+C:\Users\renato.onofre\Downloads\Samuel Moreira\DiagramaUML.dia
+C:\Users\renato.onofre\Downloads\Flavio\SpaPureBeauty\SpaPureBeauty\UML.dia
+C:\Users\renato.onofre\Downloads\Leticia\ProjetoSpaHope\ProjetoSpaHope\UMLSpaHope.dia
+C:\Senai\SENAI_MAIO_2018\REMO_2018\Disciplinas\Linguagem_Programacao_Objetos\Slides_POO\diagramaClasseFazenda.dia
+C:\Senai\SENAI_MAIO_2018\REMO_2018\Disciplinas\Linguagem_Programacao_Objetos\Slides_POO\AfazendaUML.dia
+C:\Senai\SENAI_MAIO_2018\REMO_2018\Disciplinas\Linguagem_Programacao_Objetos\UML_listESet.dia
+C:\Renato de Mattos Onofre\JAVA\desafio pilha\pilhaIncompleto.dia
+C:\2007InterfacesGraficos\Tarde\SpaAugusto\Diagrama1.dia
+C:\2007InterfacesGraficos\Tarde\JoaoLucas_SPA\Spa do João.dia
+C:\2007InterfacesGraficos\Tarde\Jasmine\UML e Jar\umlspa.dia
+C:\2007InterfacesGraficos\Tarde\Hellen Lohana - Spa\uml.dia
+C:\2007InterfacesGraficos\Tarde\GustavoHonorato - Trabalho SPA\UMLTRABALHO.dia
+C:\2007InterfacesGraficos\Tarde\Guilherme BatistaTrabalho\UML.dia
+C:\2007InterfacesGraficos\Tarde\Guilherme Araujo-SPA\umlSPA.dia
+C:\2007InterfacesGraficos\Tarde\GabrieleB_Spa\uml.dia
+C:\2007InterfacesGraficos\Tarde\Gabriel Henrique Onorio SPA\UML SPA.dia
+C:\2007InterfacesGraficos\Tarde\Edson-Spa\edson.dia
+C:\2007InterfacesGraficos\Tarde\Daniel - exercicio SPA\UML.dia
+C:\2007InterfacesGraficos\Tarde\ClaytonSPA\uml.dia
+C:\2007InterfacesGraficos\Manhã\Luiz Gustavo TrabalhoSPA\UML.dia
+C:\2007InterfacesGraficos\Manhã\Leonardo Mello - Projeto SPA\UML.dia
+C:\remo\REMO_2015\Disciplinas\Fundamentos_Programacao\FLUXOGRAMA\matriaz_laço\Repeticao\Cap7_pg155.dia
+C:\remo\REMO_2015\Disciplinas\Fundamentos_Programacao\FLUXOGRAMA\matriaz_laço\duas matrizes em uma.dia
+C:\remo\REMO_2015\Disciplinas\Fundamentos_Programacao\FLUXOGRAMA\matriaz_laço\ex62.dia
+C:\remo\REMO_2015\Disciplinas\Fundamentos_Programacao\FLUXOGRAMA\matriaz_laço\matrizSlide.dia
+C:\remo\REMO_2015\Disciplinas\Fundamentos_Programacao\FLUXOGRAMA\matriz\matriz_2_dimensao\funcionario_registro.dia
+C:\remo\REMO_2015\Disciplinas\Fundamentos_Programacao\FLUXOGRAMA\matriz\matriz_2_dimensao\desafio3.dia
+C:\remo\REMO_2015\Disciplinas\Fundamentos_Programacao\FLUXOGRAMA\matriz\matriz_2_dimensao\Procediment_Registro_Agenda.dia
+C:\Users\renato.onofre\AppData\Local\Temp\Temp1_2217365_Michael Jordans do desafio.zip.zip\UML_HeitoreGuilherme.dia
+C:\Users\renato.onofre\AppData\Local\Temp\Temp1_2217361_Francisco_e_Douglas_Transportadora.zip.zip\Francisco_e_Douglas_Transportadora\UML.dia
+C:\Users\renato.onofre\Downloads\2186494_exe.desafio.desafios.desafios
+C:\Users\renato.onofre\Documents\Linguagem_Programacao_Objetos\Slides_POO\diagramaClasseFazenda.dia
+C:\Users\renato.onofre\Documents\ALGORITMO\dia_visualg\DIA\Procedimento\procedimento_execrcicio_candidatos_passagem_referencia.dia
+C:\Users\renato.onofre\Documents\ALGORITMO\dia_visualg\Prog_visualG\EX_NOMES_COMENTADO.dia
+C:\Users\renato.onofre\Documents\Fundamentos_Programacao\FLUXOGRAMA\decisao\decisaoC\switchCaseDiaSemana.dia
+C:\Users\renato.onofre\Documents\Fundamentos_Programacao\FLUXOGRAMA\decisao\bhakara2.dia
+C:\Users\renato.onofre\Documents\Fundamentos_Programacao\FLUXOGRAMA\decisao\decisaoC\exerc_pg_43.dia
+C:\Users\renato.onofre\Documents\Fundamentos_Programacao\Jogo da Velha.dia
+C:\Users\renato.onofre\Documents\ALGORITMO\DiaPortable\Data\pg_142_EX.dia
+C:\Users\renato.onofre\Documents\ALGORITMO\DiaPortable\Data\Jogo_campo-minado.dia
+C:\Users\renato.onofre\Documents\Fundamentos_Programacao\FLUXOGRAMA\decisao\decisaoC\exerc_pg_53.dia
+C:\Users\renato.onofre\Documents\Fundamentos_Programacao\FLUXOGRAMA\exercicio_pg23 (2).dia
+C:\REMO_2014_Maio\Fundamentos_Programacao\FLUXOGRAMA\decisao\se_caso.dia
+C:\REMO_2014_Maio\lOGICA_PROGRAMACAO\FLUXOGRAMA\exercicio_pg23 (2).dia
+C:\Users\aluno.ESCOLAR509\Downloads\exercicio_pg23 (2).dia
+C:\remo7\REMO_2014_abril\ALGORITMO\DiaPortable\Data\procedimento_aula_prestação.dia
+C:\remo7\REMO_2014_abril\ALGORITMO\Avaliação\repeticao_rec.dia
+C:\remo7\REMO_2014_abril\ALGORITMO\dia_visualg\DIA\Procedimento\prestacao.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1812656_Lucas_Dias_Somativa.dia.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1812687_Prova Somativa.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1812687_Prova Somativa-
+C:\Users\aluno.ESCOLAR509.000\Downloads\1812696_somativa_Jessica.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1812696_somativa_Jessica.dia.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1805644_giuliabritoDiagrama1.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1805644_giuliabritoDiagrama1.dia.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1820231_Helen_Cristina_Av Somativa_ARRUMADO.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1820231_Helen_Cristina_Av Somativa_ARRUMADO.dia.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1805687_Francisco_avaliacaosomativa2304.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1805687_Francisco_avaliacaosomativa2304.dia.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1820078_cachorro.dia.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1812689_Jeniffer Souza Somativa LaASo.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1812689_Jeniffer Souza Somativa LaASo.autosave.autosave
+C:\Users\aluno.ESCOLAR509.000\Downloads\1805282_Somativa_correcao_fluxograma.dia.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1805694_SOMATIVA_2.dia
+C:\Users\aluno.ESCOLAR509.000\Downloads\1805694_SOMATIVA_2.dia.dia
+C:\remo7\REMO_2014_abril\ALGORITMO\dia_visualg\DIA\pass_valor_refer.dia
+C:\remo7\REMO_2014_abril\ALGORITMO\Avaliação\Somativa2_1inf_B.dia
+C:\remo7\REMO_2014_abril\ALGORITMO\Avaliação\formativa3_2inf_N.dia
+C:\remo7\REMO_2014_abril\ALGORITMO\DiaPortable\Data\exercicio_matriz_2dim_estacionamento.dia
+C:\remo7\REMO_2014_abril\ALGORITMO\matriz_2_dimensao\desafio3.dia
+C:\remo7\REMO_2014\ALGORITMO\matriz_2_dimensao\desafio3.dia
+C:\remo7\REMO_2014\ALGORITMO\DiaPortable\Data\esquema_slide_registro.dia
+C:\remo7\REMO_2014\ALGORITMO\DiaPortable\Data\ex_pag186_2dim.dia
+C:\remo7\REMO_2014\ALGORITMO\dia_visualg\DIA\desafio3_matriz1_dimensão.dia
+C:\remo7\REMO_2014\ALGORITMO\dia_visualg\DIA\desafio.dia
+C:\Users\aluno\Downloads\exemplo_programa_menu.dia
+C:\remo7\REMO_2014\ALGORITMO\matriz_2_dimensao\Registro_Agenda.dia
+C:\Documents and Settings\senai\Meus documentos\Downloads\1680910_Desafio_Cadastro_Escolar_Vinicius.dia.dia
+C:\REMO9\REMO_2014\ALGORITMO\somativa4\1558920_Henrique_Rios_Somativa4.dia.dia
+C:\REMO9\REMO_2014\ALGORITMO\dia_visualg\DIA\Procedimento\av_SP_1_FORMATIVA.dia
+C:\REMO9\REMO_2014\ALGORITMO\dia_visualg\DIA\av_SP_1_FORMATIVA.dia
+C:\REMO9\REMO_2014\ALGORITMO\dia_visualg\DIA\desafio.dia
+C:\REMO9\REMO_2014\ALGORITMO\dia_visualg\DIA\EX_NOMES_COMENTADO.dia
+C:\Users\aluno\Downloads\EXERCICIOS_PAGS_186_187_188-COMPLETO.dia
+C:\Users\aluno\Downloads\Ex_B_pag_186.dia
+C:\REMO9\REMO_2014\ALGORITMO\Avaliação\formativa2.dia
+C:\REMO9\REMO_2014\ALGORITMO\DiaPortable\Data\pg_172_EX.dia
+C:\Algoritmo\DiaPortable\Data\laco_pg_129_ex.dia
+C:\Users\aluno.ESCOLAR509\Desktop\Somativa2.dia
+C:\Users\aluno.ESCOLAR509\Desktop\formativa4_proc.dia
+C:\Algoritmo\DiaPortable\Data\Diagrama1.dia~
+C:\Documents and Settings\sn71531\Meus documentos\SENAI\Cursos _tecnicos\Informatica\Algoritmo\dia_visualg\Prog_visualG\fatorial_funcao_recurs.dia
+C:\Algoritmo\DiaPortable\Data\Diagrama2.dia
+C:\Users\aluno.ESCOLAR509\Desktop\faca_caso_operacoes.dia
+C:\Users\aluno.ESCOLAR509\Desktop\faca_caso_natação.dia
+C:\Algoritmo\DiaPortable\Data\avaliacao4.dia
+C:\Documents and Settings\aluno.SN509938977\Desktop\situcao_problema_av_somativa1.dia
+C:\Documents and Settings\aluno.SN509938977\Meus documentos\Downloads\planilha controle avaliacao formativa_ALG_2_INF_T_2013.lnk
+C:\Users\aluno.ESCOLAR509\Downloads\EX_98_i.dia
+C:\Users\aluno.ESCOLAR509\Downloads\NUM_DIV_2E3.dia
+C:\Users\aluno.ESCOLAR509\Desktop\EX_98_i.dia
+C:\Users\aluno.ESCOLAR509\Downloads\soma_quadradaos.dia
+C:\Users\aluno.ESCOLAR509\Desktop\soma_quadradaos.dia
+C:\Algoritmo\DiaPortable\Data\div_3_2_2013.dia
+C:\Algoritmo\DiaPortable\Data\NUM_DIV_2E3.dia
+C:\Algoritmo\DiaPortable\Data\fat_proc_referec.dia
+C:\lógica de programação\FLUXOGRAMA\Cap7_pg155.dia
+C:\Users\aluno.ESCOLAR509\Desktop\travessia_rio.dia
+C:\lógica de programação\FLUXOGRAMA\travessia_rio.dia
+C:\Users\aluno.ESCOLAR509\Desktop\pass_valor_refer.dia
+C:\Algoritmo\dia_visualg\prestacao.dia
+C:\Algoritmo\dia_visualg\EX_NOMES_COMENTADO.dia
+C:\Users\aluno.ESCOLAR509\Desktop\formativa3.dia
+C:\Users\aluno.ESCOLAR509\Desktop\bhakara2.dia
+C:\Users\aluno.ESCOLAR509\Desktop\media_aprovado_reprovado_exame.dia
+C:\Users\aluno.ESCOLAR509\Desktop\DiaPortable\Data\NUM_DIV_2E3.dia
+C:\Users\aluno.ESCOLAR509\Desktop\bhakara2.dia
+C:\Users\aluno.ESCOLAR509\Desktop\bhakara.dia
+C:\Users\aluno.ESCOLAR509\Desktop\exrciccio_comentado.dia
+C:\Users\aluno.ESCOLAR509\Desktop\DiaPortable\Data\fat_proc_referec.dia
+C:\Users\aluno.ESCOLAR509\Downloads\Registro_Agenda.dia
+C:\Users\aluno.ESCOLAR509\Desktop\Diagrama1.dia
+C:\Users\aluno.ESCOLAR509\Downloads\Jogo_Da_Velha.dia
+C:\Users\aluno.ESCOLAR509\Downloads\JogodaVelha.dia
+C:\Users\aluno.ESCOLAR509\Downloads\LUCIANA_JOGODAVELHA.dia
+C:\Users\aluno.ESCOLAR509\Downloads\Jose_Augusto_Jogo_da_Velha.dia
+C:\Users\aluno.ESCOLAR509\Downloads\MatheusJogodaVelha.dia
+C:\Users\aluno.ESCOLAR509\Desktop\MEDIA.dia
+C:\Users\aluno.ESCOLAR509\Downloads\172-H.dia
+C:\Users\aluno.ESCOLAR509\Downloads\EXERCICIO_G_172.dia
+C:\Users\aluno\Documents\DiaPortable\Data\Diagrama1.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Repetição\REVISÃO_REPETICAO.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Repetição\Repeticao_ex_C_soma _100_nr_naturais.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Repetição\Repeticao_ex_C_soma_tabuleiro_xadrez.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Repetição\Repeticao_ex_Q_area_comodo.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Repetição\Cadastro_aluno_repeticao.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Repetição\Exercicio_A_enquanto_faca_e_ate_seja.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Repetição\Repeticao_ex_G_expoente_base3.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Repetição\Repeticao_ex_C_soma_100_Nr.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\par_dança.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\notas.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\ORDEM_CRESCENTE.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\num_div_2_3.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\neg_pos.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\menor_numero_e maior numero.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\decisão\diferenca_2_numeros.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Diagrama2.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Cadastro de aluno.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\bhakara.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Atravessia_if_then_else_2.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Atravessia_if_then_else.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Repeticao_ex_B_Tabuada.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Exercicio_A_enquanto_faca_e_ate_seja.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\peso_ideal.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Peso_peixe.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\se_caso_Times.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\se_caso.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\travessia_rio.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\se_caso_codificacao.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\triângulo.dia
+C:\remo\software\DiaPortable\Data\Atravessia_17_04.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\faca_caso_operacoes.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\Sexo_valido.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\lógica de programação\fluxogramas\bhakara2.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\fluxogramas\Peso maior_if_then.dia
+C:\remo\SENAI\Cursos Tecnicos\Informatica\fluxogramas\numero_POSITIVO_ou_ Negativo.dia
+C:\remo\Informatica\fluxogramas\numero_POSITIVO.dia
+C:\remo\DiaPortable\Data\Diagrama_mestre.dia
+C:\remo\Informatica\fluxogramas\diferenca_2_numeros.dia
+C:\remo\Informatica\fluxogramas\salario_reajuste.dia
+C:\remo\DiaPortable\Data\Diagrama1.dia
+C:\Documents and Settings\senai\Desktop\dia\DiaPortable\Data\Diagrama1.dia
+C:\Documents and Settings\senai\Desktop\dia\DiaPortable\Data\soma multiplicação 4 numeros.dia#</dia:string>
+    </dia:attribute>
+  </dia:list>
+  <dia:list role="sheets">
+    <dia:attribute name="listvalue">
+      <dia:string>#FS
+Circuit
+Electric
+Database
+ER
+Logic#</dia:string>
+    </dia:attribute>
+  </dia:list>
+  <dia:list role="arrow-menu">
+    <dia:attribute name="listvalue">
+      <dia:string>#Filled Triangle
+Blanked Concave
+Infinite Line#</dia:string>
+    </dia:attribute>
+  </dia:list>
+  <dia:list role="color-menu">
+    <dia:attribute name="listvalue">
+      <dia:string>##ADD8E6
+#FFFF00
+#D8E5E5
+#000099#</dia:string>
+    </dia:attribute>
+  </dia:list>
+  <dia:list role="font-menu">
+    <dia:attribute name="listvalue">
+      <dia:string>##</dia:string>
+    </dia:attribute>
+  </dia:list>
+  <dia:list role="diagram-tree-hidden-types">
+    <dia:attribute name="listvalue">
+      <dia:string>##</dia:string>
+    </dia:attribute>
+  </dia:list>
+  <dia:integer role="line-style">
+    <dia:attribute name="intvalue">
+      <dia:int val="0"/>
+    </dia:attribute>
+  </dia:integer>
+  <dia:integer role="undo_depth">
+    <dia:attribute name="intvalue">
+      <dia:int val="15"/>
+    </dia:attribute>
+  </dia:integer>
+  <dia:integer role="new_view_height">
+    <dia:attribute name="intvalue">
+      <dia:int val="400"/>
+    </dia:attribute>
+  </dia:integer>
+  <dia:integer role="new_view_width">
+    <dia:attribute name="intvalue">
+      <dia:int val="500"/>
+    </dia:attribute>
+  </dia:integer>
+  <dia:integer role="grid_major">
+    <dia:attribute name="intvalue">
+      <dia:int val="5"/>
+    </dia:attribute>
+  </dia:integer>
+  <dia:integer role="recent_documents_list_size">
+    <dia:attribute name="intvalue">
+      <dia:int val="5"/>
+    </dia:attribute>
+  </dia:integer>
+  <dia:integer role="diagram_tree_obj_sort">
+    <dia:attribute name="intvalue">
+      <dia:int val="2"/>
+    </dia:attribute>
+  </dia:integer>
+  <dia:integer role="diagram_tree_dia_sort">
+    <dia:attribute name="intvalue">
+      <dia:int val="2"/>
+    </dia:attribute>
+  </dia:integer>
+  <dia:integer role="import-filter">
+    <dia:attribute name="intvalue">
+      <dia:int val="1"/>
+    </dia:attribute>
+  </dia:integer>
+  <dia:real role="start-arrow-width">
+    <dia:attribute name="realvalue">
+      <dia:real val="0.5"/>
+    </dia:attribute>
+  </dia:real>
+  <dia:real role="dash-length">
+    <dia:attribute name="realvalue">
+      <dia:real val="1"/>
+    </dia:attribute>
+  </dia:real>
+  <dia:real role="linewidth">
+    <dia:attribute name="realvalue">
+      <dia:real val="0.050000000000000003"/>
+    </dia:attribute>
+  </dia:real>
+  <dia:real role="end-arrow-length">
+    <dia:attribute name="realvalue">
+      <dia:real val="0.5"/>
+    </dia:attribute>
+  </dia:real>
+  <dia:real role="start-arrow-length">
+    <dia:attribute name="realvalue">
+      <dia:real val="0.5"/>
+    </dia:attribute>
+  </dia:real>
+  <dia:real role="grid_w">
+    <dia:attribute name="realvalue">
+      <dia:real val="1"/>
+    </dia:attribute>
+  </dia:real>
+  <dia:real role="grid_x">
+    <dia:attribute name="realvalue">
+      <dia:real val="1"/>
+    </dia:attribute>
+  </dia:real>
+  <dia:real role="new_view_zoom">
+    <dia:attribute name="realvalue">
+      <dia:real val="100"/>
+    </dia:attribute>
+  </dia:real>
+  <dia:real role="grid_y">
+    <dia:attribute name="realvalue">
+      <dia:real val="1"/>
+    </dia:attribute>
+  </dia:real>
+  <dia:real role="end-arrow-width">
+    <dia:attribute name="realvalue">
+      <dia:real val="0.5"/>
+    </dia:attribute>
+  </dia:real>
+  <dia:boolean role="render_bounding_boxes">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="false"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="grid_visible">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="reset_tools_after_create">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="grid_snap">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="false"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="reverse_rubberbanding_intersects">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="snap_object">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="diagram_tree_save_hidden">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="false"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="use_menu_bar">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="toolbox_on_top">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="false"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="grid_hex">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="false"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="grid_dynamic">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="show_cx_pts">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="is_portrait">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="pagebreak_visible">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="view_antialised">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="false"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="pagebreak_solid">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:boolean role="compress_save">
+    <dia:attribute name="booleanvalue">
+      <dia:boolean val="true"/>
+    </dia:attribute>
+  </dia:boolean>
+  <dia:string role="favored_svg_export">
+    <dia:attribute name="stringvalue">
+      <dia:string>#any#</dia:string>
+    </dia:attribute>
+  </dia:string>
+  <dia:string role="favored_ps_export">
+    <dia:attribute name="stringvalue">
+      <dia:string>#any#</dia:string>
+    </dia:attribute>
+  </dia:string>
+  <dia:string role="favored_wmf_export">
+    <dia:attribute name="stringvalue">
+      <dia:string>#any#</dia:string>
+    </dia:attribute>
+  </dia:string>
+  <dia:string role="last-sheet-selected">
+    <dia:attribute name="stringvalue">
+      <dia:string>#Flowchart#</dia:string>
+    </dia:attribute>
+  </dia:string>
+  <dia:string role="end-arrow-type">
+    <dia:attribute name="stringvalue">
+      <dia:string>#Filled Concave#</dia:string>
+    </dia:attribute>
+  </dia:string>
+  <dia:string role="start-arrow-type">
+    <dia:attribute name="stringvalue">
+      <dia:string>#None#</dia:string>
+    </dia:attribute>
+  </dia:string>
+  <dia:string role="length_unit">
+    <dia:attribute name="stringvalue">
+      <dia:string>#Centimeter#</dia:string>
+    </dia:attribute>
+  </dia:string>
+  <dia:string role="new_diagram_papertype">
+    <dia:attribute name="stringvalue">
+      <dia:string>#A4#</dia:string>
+    </dia:attribute>
+  </dia:string>
+  <dia:string role="fontsize_unit">
+    <dia:attribute name="stringvalue">
+      <dia:string>#Point#</dia:string>
+    </dia:attribute>
+  </dia:string>
+  <dia:string role="favored_emf_export">
+    <dia:attribute name="stringvalue">
+      <dia:string>#any#</dia:string>
+    </dia:attribute>
+  </dia:string>
+  <dia:string role="favored_png_export">
+    <dia:attribute name="stringvalue">
+      <dia:string>#any#</dia:string>
+    </dia:attribute>
+  </dia:string>
+  <dia:color role="new_diagram_bgcolour">
+    <dia:attribute name="colorvalue">
+      <dia:color val="#ffffff"/>
+    </dia:attribute>
+  </dia:color>
+  <dia:color role="pagebreak_colour">
+    <dia:attribute name="colorvalue">
+      <dia:color val="#000099"/>
+    </dia:attribute>
+  </dia:color>
+  <dia:color role="bg_color">
+    <dia:attribute name="colorvalue">
+      <dia:color val="#ffffff"/>
+    </dia:attribute>
+  </dia:color>
+  <dia:color role="grid_colour">
+    <dia:attribute name="colorvalue">
+      <dia:color val="#d8e5e5"/>
+    </dia:attribute>
+  </dia:color>
+  <dia:color role="fg_color">
+    <dia:attribute name="colorvalue">
+      <dia:color val="#000000"/>
+    </dia:attribute>
+  </dia:color>
+</dia:persistence>

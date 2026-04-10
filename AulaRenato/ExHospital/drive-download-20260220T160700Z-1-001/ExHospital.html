@@ -1,0 +1,109 @@
+    <!doctype html>
+
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hospital Doação de Sangue</title>
+
+        <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        label {
+            display: block;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            margin-top: 5px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #e63946;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        </style>
+    </head>
+    <body>
+        <label>
+        Nome:
+        <input type="text" id="nome" placeholder="Digite seu nome" />
+        </label>
+
+        <label>
+        Idade:
+        <input type="number" id="idade" placeholder="Digite sua idade" />
+        </label>
+
+        <label>
+        Peso (Kg):
+        <input type="number" id="peso" placeholder="Digite seu peso (Kg)" />
+        </label>
+
+        <label>
+        Gênero:
+        <select id="genero">
+            <option value="">Selecione</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+        </select>
+        </label>
+
+        <br /><br />
+        <button type="button" onclick="TestaAptoDoar()">Verificar</button>
+
+        <h2>Resultado:</h2>
+        <div id="resultado"></div>
+
+        <script>
+        function TestaAptoDoar() {
+            var nome = document.getElementById("nome").value;
+            var peso = Number(document.getElementById("peso").value);
+            var idade = Number(document.getElementById("idade").value);
+            var genero = document.getElementById("genero").value;
+
+            var resultado = document.getElementById("resultado");
+
+            if (peso >= 50 && idade >= 18 && idade <= 69) {
+            if (genero === "Masculino") {
+                resultado.innerHTML = `Olá ${nome}, você deve doar 700 gramas 🩸`;
+            } else if (genero === "Feminino") {
+                resultado.innerHTML = `Olá ${nome}, você deve doar 400 gramas 🩸`;
+            } else {
+                resultado.innerHTML = `Selecione um gênero 🙂`;
+            }
+            } else {
+            resultado.innerHTML = `Lamento ${nome}, você não está apto para a doação 😢<br>Obrigado pela boa intenção!`;
+            }
+        }
+        </script>
+    </body>
+    </html>
