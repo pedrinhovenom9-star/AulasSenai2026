@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Situação de Aula — Levantamento de Requisitos</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Libre+Franklin:wght@300;400;600;700&display=swap%22 rel="stylesheet" />
+  <style>
+    :root {
+      --ink:       #1a1612;
+      --paper:     #f5f0e8;
+      --cream:     #ede7d5;
+      --rust:      #b84c27;
+      --rust-lt:   #d9693f;
+      --steel:     #3d5a6e;
+      --steel-lt:  #5a7f96;
+      --gold:      #c9952a;
+      --rule:      #c8bfaa;
+      --note-bg:   #fff9ed;
+      --note-bd:   #e2c97e;
+ 
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans:  'Libre Franklin', sans-serif;
+      --mono:  'DM Mono', monospace;
+    }
+ 
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    @media print {
+      body { background: white; }
+      .no-print { display: none !important; }
+      .page { box-shadow: none; margin: 0; border-radius: 0; page-break-after: always; }
+      .page:last-child { page-break-after: auto; }
+    }
+ 
+    body {
+      font-family: var(--sans);
+      background: #d6cfc0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,.06) 28px),
+        linear-gradient(135deg, #d6cfc0 0%, #ccc4b2 100%);
+      min-height: 100vh;
+      padding: 2rem 1rem 4rem;
+      color: var(--ink);
+    }
+ 
+    /* ── top bar ── */
+    .topbar {
+      max-width: 860px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .topbar-label {
+      font-family: var(--mono);
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #7a6f5d;
+      background: rgba(255,255,255,.4);
+      padding: .3rem .7rem;
+      border-radius: 2px;
+      border: 1px solid var(--rule);
+    }
+    .print-btn {
+      font-family: var(--mono);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      background: var(--rust);
+      color: #fff;
+      border: none;
+      padding: .4rem 1rem;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .print-btn:hover { background: var(--rust-lt); }
+ 
+    /* ── page card ── */
+    .page {
+      max-width: 860px;
+      margin: 0 auto 2rem;
+      background: var(--paper);
+      border-radius: 3px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.18), 0 8px 32px rgba(0,0,0,.1);
+      padding: 3.2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--rust) 0%, var(--gold) 50%, var(--steel) 100%);
+    }
+ 
+    /* page number stamp */
+    .page-num {
+      position: absolute;
+      bottom: 1.4rem;
+      right: 2rem;
+      font-family: var(--mono);
+      font-size: .68rem;
+      color: #a9a090;
+      letter-spacing: .08em;
+    }
+ 
+    /* ── header of page 1 ── */
+    .doc-header {
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+    .institution-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: .8rem;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .institution {
+      font-family: var(--mono);
+      font-size: .68rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: #7a6f5d;
+    }
+    .meta-pills {
+      display: flex;
+      gap: .4rem;
+      flex-wrap: wrap;
+    }
+    .pill {
+      font-family: var(--mono);
+      font-size: .62rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      padding: .18rem .55rem;
+      border-radius: 2px;
+    }
+    .pill-rust  { background: var(--rust);  color: #fff; }
+    .pill-steel { background: var(--steel); color: #fff; }
+    .pill-gold  { border: 1px solid var(--gold); color: var(--gold); }
+ 
+    .doc-title {
+      font-family: var(--serif);
+      font-size: 2.1rem;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: .3rem;
+    }
+    .doc-subtitle {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: .95rem;
+      color: #5a5040;
+      letter-spacing: .02em;
+    }
+ 
+    /* ── section headings ── */
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      color: var(--rust);
+      margin: 2rem 0 .7rem;
+      position: relative;
+      padding-left: 1.1rem;
+    }
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0; top: .15em;
+      width: 4px; height: 1.1em;
+      background: var(--rust);
+      border-radius: 1px;
+    }
+ 
+    h3 {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--steel);
+      margin: 1.4rem 0 .5rem;
+    }
+ 
+    /* ── body text ── */
+    p {
+      font-size: .935rem;
+      line-height: 1.78;
+      color: #2e2820;
+      margin-bottom: .9rem;
+      text-align: justify;
+    }
+    p:last-child { margin-bottom: 0; }
+ 
+    strong { font-weight: 700; color: var(--ink); }
+    em { font-style: italic; color: #3d3025; }
+ 
+    /* ── callout / nota ── */
+    .nota {
+      background: var(--note-bg);
+      border-left: 3px solid var(--note-bd);
+      padding: .9rem 1.1rem;
+      margin: 1.2rem 0;
+      border-radius: 0 3px 3px 0;
+    }
+    .nota-label {
+      font-family: var(--mono);
+      font-size: .65rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: #a07d2a;
+      margin-bottom: .35rem;
+    }
+    .nota p { font-size: .88rem; margin-bottom: 0; }
+ 
+    /* ── info table ── */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.4rem;
+      font-size: .85rem;
+    }
+    .info-table td {
+      padding: .5rem .7rem;
+      border: 1px solid var(--rule);
+      vertical-align: top;
+    }
+    .info-table td:first-child {
+      font-family: var(--mono);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: var(--cream);
+      color: #5a5040;
+      white-space: nowrap;
+      width: 30%;
+    }
+ 
+    /* ── horizontal rule ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 1.6rem 0;
+    }
+ 
+    /* ── actors list ── */
+    .actor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: .7rem;
+      margin: .8rem 0 1.2rem;
+    }
+    .actor-card {
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      padding: .7rem .9rem;
+    }
+    .actor-name {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: .82rem;
+      color: var(--steel);
+      margin-bottom: .25rem;
+    }
+    .actor-desc {
+      font-size: .78rem;
+      line-height: 1.55;
+      color: #4a4030;
+    }
+ 
+    /* ── scenario / cena ── */
+    .cena {
+      background: linear-gradient(135deg, #eee8d8 0%, #e8dfc9 100%);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      padding: 1.1rem 1.3rem;
+      margin: 1rem 0;
+      position: relative;
+    }
+    .cena-tag {
+      font-family: var(--mono);
+      font-size: .62rem;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      color: #7a6f5d;
+      margin-bottom: .4rem;
+    }
+    .cena p { font-size: .9rem; color: #2a2018; margin-bottom: .5rem; }
+    .cena p:last-child { margin-bottom: 0; }
+ 
+    /* ── task box ── */
+    .task-box {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 3px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.6rem 0 .8rem;
+    }
+    .task-box-title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin-bottom: .8rem;
+    }
+    .task-list {
+      list-style: none;
+      counter-reset: task;
+    }
+    .task-list li {
+      counter-increment: task;
+      display: flex;
+      gap: .8rem;
+      align-items: flex-start;
+      font-size: .88rem;
+      line-height: 1.65;
+      color: #ddd5c0;
+      margin-bottom: .55rem;
+      padding-bottom: .55rem;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .task-list li:last-child { border-bottom: none; margin-bottom: 0; }
+    .task-list li::before {
+      content: counter(task, decimal-leading-zero);
+      font-family: var(--mono);
+      font-size: .68rem;
+      color: var(--gold);
+      min-width: 24px;
+      padding-top: .18em;
+    }
+ 
+    /* ── criteria table ── */
+    .crit-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .82rem;
+      margin: 1rem 0 1.4rem;
+    }
+    .crit-table th {
+      background: var(--steel);
+      color: #fff;
+      font-family: var(--mono);
+      font-size: .65rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      padding: .5rem .7rem;
+      text-align: left;
+      font-weight: 500;
+    }
+    .crit-table td {
+      padding: .5rem .7rem;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: top;
+      line-height: 1.55;
+      color: #2e2820;
+    }
+    .crit-table tr:nth-child(even) td { background: var(--cream); }
+    .crit-table tr:last-child td { border-bottom: none; }
+ 
+    .badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: .6rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      padding: .15rem .45rem;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    .badge-a { background: #b84c27; color: #fff; }
+    .badge-b { background: #3d5a6e; color: #fff; }
+    .badge-c { background: #8a8070; color: #fff; }
+ 
+    /* ── footer of doc ── */
+    .doc-footer {
+      border-top: 1px solid var(--rule);
+      margin-top: 2rem;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .doc-footer span {
+      font-family: var(--mono);
+      font-size: .65rem;
+      color: #a9a090;
+      letter-spacing: .08em;
+    }
+  </style>
+</head>
+<body>
+ 
+<!-- toolbar -->
+<div class="topbar no-print">
+  <span class="topbar-label">📄 Situação de Aula — Levantamento de Requisitos</span>
+  <button class="print-btn" onclick="window.print()">⎙ Imprimir / Salvar PDF</button>
+</div>
+ 
+<!-- ══════════════════════════════════════════════════════
+     PÁGINA 1
+══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="doc-header">
+    <div class="institution-row">
+      <span class="institution">SENAI-SP · Unidade de Ensino</span>
+      <div class="meta-pills">
+        <span class="pill pill-rust">Análise de Sistemas</span>
+        <span class="pill pill-steel">Engenharia de Requisitos</span>
+        <span class="pill pill-gold">Situação de Aprendizagem</span>
+      </div>
+    </div>
+    <div class="doc-title">O Caos dos Chamados da Metalúrgica Fortaleza</div>
+    <div class="doc-subtitle">Um texto-base para levantamento e classificação de requisitos de software</div>
+  </div>
+ 
+  <table class="info-table">
+    <tr><td>Componente Curricular</td><td>Análise e Projeto de Sistemas · Engenharia de Software</td></tr>
+    <tr><td>Competência-Alvo</td><td>Levantar, documentar e classificar requisitos funcionais e não funcionais de um sistema de informação</td></tr>
+    <tr><td>Duração Estimada</td><td>2 aulas de 50 min (leitura + atividade de extração)</td></tr>
+    <tr><td>Número de Alunos</td><td>Individual ou grupos de até 3 participantes</td></tr>
+    <tr><td>Produto Entregável</td><td>Lista estruturada de 10 RF e 10 RNF com classificação por prioridade</td></tr>
+  </table>
+ 
+  <h2>Contexto Organizacional</h2>
+  <p>
+    A <strong>Metalúrgica Fortaleza Ltda.</strong> é uma empresa de médio porte localizada no interior do estado de São Paulo, com aproximadamente 380 funcionários distribuídos entre os setores de Produção, Manutenção, Qualidade, TI, RH e Administrativo. A empresa fabrica componentes metálicos sob demanda para clientes da indústria automotiva e de máquinas agrícolas.
+  </p>
+  <p>
+    Nos últimos dois anos, o crescimento acelerado da operação tornou evidente um problema que antes passava despercebido: <em>não existe nenhum controle formal sobre as solicitações internas de serviços</em>. Qualquer colaborador que precise de suporte — seja para consertar um equipamento, instalar um software, ajustar uma máquina ou resolver um problema elétrico — recorre ao método que estiver mais à mão: mensagem de WhatsApp para o técnico conhecido, bilhete colado na porta da sala, ligação telefônica no celular pessoal ou simplesmente um grito no corredor.
+  </p>
+  <p>
+    O resultado é previsível: chamados perdidos, atendimentos duplicados, prazos descumpridos sem que ninguém saiba exatamente quem era responsável, e uma sensação geral de que "nada funciona direito por aqui". O gerente de TI, <strong>Sr. Renato Carvalho</strong>, apresentou ao diretor de operações um relatório alarmante: nos últimos seis meses, ao menos 23% das paradas não programadas na linha de produção estiveram relacionadas, direta ou indiretamente, à falta de registro e acompanhamento adequados de solicitações de manutenção.
+  </p>
+ 
+  <h2>A Decisão</h2>
+  <p>
+    Diante dos números, a diretoria aprovou a contratação de uma equipe para desenvolver um <strong>Sistema de Gestão de Chamados Internos</strong> — batizado internamente de <em>Fortaleza Help</em>. O sistema deverá atender primariamente aos departamentos de TI e Manutenção, mas foi deixada aberta a possibilidade de expansão futura para outros setores de suporte.
+  </p>
+  <p>
+    Você faz parte da equipe de desenvolvimento contratada. Antes de qualquer linha de código, sua missão é <strong>extrair e organizar os requisitos do sistema</strong> a partir das informações coletadas em reuniões com os stakeholders, transcritas nas próximas páginas.
+  </p>
+ 
+  <div class="nota">
+    <div class="nota-label">⚠ Instrução ao Aluno</div>
+    <p>Leia todo o texto com atenção antes de responder. As informações estão distribuídas de forma não linear, assim como ocorre em situações reais de levantamento de requisitos. Parte das necessidades está explícita; outra parte está implícita nas falas dos personagens.</p>
+  </div>
+ 
+  <div class="doc-footer">
+    <span>SENAI-SP · Material Pedagógico · Uso Educacional</span>
+    <span>SA-REQ-2024 · v1.0</span>
+  </div>
+  <div class="page-num">Página 1 de 3</div>
+</div>
+ 
+ 
+<!-- ══════════════════════════════════════════════════════
+     PÁGINA 2
+══════════════════════════════════════════════════════ -->
+<div class="page">
+ 
+  <h2>Vozes do Campo: Falas dos Stakeholders</h2>
+  <p>As declarações a seguir foram coletadas em reuniões de levantamento de requisitos conduzidas ao longo de três dias nas instalações da Metalúrgica Fortaleza.</p>
+ 
+  <h3>Atores Identificados</h3>
+  <div class="actor-grid">
+    <div class="actor-card">
+      <div class="actor-name">Renato Carvalho</div>
+      <div class="actor-desc">Gerente de TI · Principal patrocinador do projeto e gestor do time de suporte técnico.</div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-name">Cláudia Ramos</div>
+      <div class="actor-desc">Supervisora de Manutenção · Coordena a equipe de técnicos mecânicos e elétricos.</div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-name">Jorge Melo</div>
+      <div class="actor-desc">Técnico de TI · Atendente front-line de chamados de tecnologia.</div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-name">Patrícia Andrade</div>
+      <div class="actor-desc">Analista de RH · Usuária-tipo que abre chamados com frequência.</div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-name">Fábio Nogueira</div>
+      <div class="actor-desc">Operador de Produção · Representa os usuários do chão de fábrica, com baixa familiaridade digital.</div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-name">Dra. Helena Saito</div>
+      <div class="actor-desc">Diretora de Operações · Demandante estratégica; foco em indicadores e conformidade.</div>
+    </div>
+  </div>
+ 
+  <hr />
+ 
+  <div class="cena">
+    <div class="cena-tag">🗣 Renato Carvalho — Gerente de TI</div>
+    <p>"O que precisamos de forma mais urgente é saber quem abriu o chamado, quando abriu, e quem ficou responsável por atender. Hoje isso não existe. Meu técnico Jorge atende seis chamados num dia e nenhum fica registrado. Se o cliente reclamar depois, não temos como provar nada."</p>
+    <p>"Outra coisa importante: preciso definir prazos de atendimento por tipo de problema. Um computador que não liga numa sala administrativa é diferente de uma falha no servidor de produção. Esse segundo tem de ser resolvido em no máximo duas horas, o primeiro pode esperar até o fim do dia. O sistema tem de saber essa diferença e nos alertar quando o prazo está chegando ao fim."</p>
+    <p>"Ah, e eu quero um painel — um dashboard — onde eu possa ver quantos chamados estão abertos, quais estão atrasados e qual técnico está sobrecarregado. Isso precisa atualizar em tempo real, ou pelo menos a cada poucos minutos."</p>
+  </div>
+ 
+  <div class="cena">
+    <div class="cena-tag">🗣 Cláudia Ramos — Supervisora de Manutenção</div>
+    <p>"Na manutenção, o problema é um pouco diferente. Meus técnicos às vezes estão no meio do galpão, com as mãos sujas, longe de qualquer computador. Se o sistema não funcionar no celular, não vai adiantar nada pra gente aqui embaixo. Precisa ser algo que dê pra usar num smartphone sem treinamento demorado."</p>
+    <p>"Também quero que o solicitante — o operador, o supervisor — consiga acompanhar o chamado sem precisar ligar pra ninguém. Que ele receba uma notificação quando alguém aceitar o chamado e outra quando estiver resolvido. Isso evita aquela cobrança toda hora pelo corredor."</p>
+    <p>"E uma coisa que eu acho essencial: quando o chamado for encerrado, o técnico tem de registrar o que ele fez. Um histórico do atendimento. Porque senão, daqui a três meses, o mesmo equipamento quebra do mesmo jeito e a gente não tem referência nenhuma."</p>
+  </div>
+ 
+  <div class="cena">
+    <div class="cena-tag">🗣 Jorge Melo — Técnico de TI</div>
+    <p>"Olha, o que me atrapalha todo dia é não saber qual chamado atender primeiro. Às vezes chegam cinco ao mesmo tempo e eu fico sem saber o que é urgente de verdade. Se o sistema me mostrasse os chamados ordenados por prioridade, já ajudaria muito."</p>
+    <p>"Também seria ótimo se eu pudesse adicionar comentários durante o atendimento — 'fui lá, o equipamento estava desligado, liguei, aguardando confirmação do usuário' — esse tipo de coisa. Sem isso, fico perdendo tempo explicando por telefone."</p>
+  </div>
+ 
+  <div class="cena">
+    <div class="cena-tag">🗣 Patrícia Andrade — Analista de RH</div>
+    <p>"Eu precisaria de algo bem simples. Entro no sistema, descrevo o meu problema, escolho o tipo — é de TI, é de manutenção, é de facilities — e mando. Não posso ficar preenchendo formulário de dez campos toda vez. E o sistema tem de saber que sou eu automaticamente quando eu faço login, sem ter de digitar meu nome e departamento toda vez."</p>
+    <p>"E quero poder ver meus chamados antigos. Às vezes preciso reabrir um que foi fechado antes de realmente resolver."</p>
+  </div>
+ 
+  <div class="cena">
+    <div class="cena-tag">🗣 Fábio Nogueira — Operador de Produção</div>
+    <p>"Eu não sei usar muito bem computador, não. Se o sistema tiver muita coisa pra clicar, eu prefiro continuar mandando mensagem no WhatsApp mesmo. Tem de ser fácil. Imagem bonita, poucos botões. Se eu conseguir abrir um chamado em menos de um minuto, tudo bem."</p>
+  </div>
+ 
+  <div class="cena">
+    <div class="cena-tag">🗣 Dra. Helena Saito — Diretora de Operações</div>
+    <p>"Do ponto de vista da diretoria, o sistema precisa nos dar relatórios gerenciais. Quero saber, todo mês, quantos chamados foram abertos por setor, qual o tempo médio de resolução, quais tipos de problema são mais recorrentes. Isso vai embasar as decisões de investimento em manutenção preventiva e em pessoal."</p>
+    <p>"Também me preocupa a segurança. Não pode ser qualquer pessoa acessando dados de outros departamentos. Cada usuário deve ver apenas o que é pertinente ao seu perfil. E todo o histórico precisa ser guardado por pelo menos cinco anos para fins de auditoria."</p>
+    <p>"Por fim, a empresa está crescendo. Hoje somos 380 funcionários, mas em dois anos podemos ser 600 ou mais. O sistema tem de aguentar esse crescimento sem precisar ser refeito do zero."</p>
+  </div>
+ 
+  <div class="doc-footer">
+    <span>SENAI-SP · Material Pedagógico · Uso Educacional</span>
+    <span>SA-REQ-2024 · v1.0</span>
+  </div>
+  <div class="page-num">Página 2 de 3</div>
+</div>
+ 
+ 
+<!-- ══════════════════════════════════════════════════════
+     PÁGINA 3
+══════════════════════════════════════════════════════ -->
+<div class="page">
+ 
+  <h2>Complemento: Restrições e Informações Técnicas</h2>
+  <p>
+    Além das declarações dos stakeholders, a equipe coletou informações técnicas e restrições operacionais junto ao setor de TI. Elas devem ser consideradas na definição dos requisitos não funcionais.
+  </p>
+ 
+  <h3>Ambiente Tecnológico Atual</h3>
+  <p>
+    A empresa utiliza um servidor local com Windows Server 2019, mas a diretoria expressou interesse em migrar aplicações críticas para a nuvem no médio prazo. O sistema de chamados deverá ser desenvolvido como uma <strong>aplicação web</strong>, acessível por navegadores modernos (Chrome, Edge e Firefox) e por dispositivos móveis com Android e iOS. Não existe previsão de fornecimento de equipamentos corporativos para o chão de fábrica; os operadores usarão seus próprios smartphones.
+  </p>
+  <p>
+    A infraestrutura de rede interna é estável, mas a cobertura de Wi-Fi nos galpões de produção é inconsistente. O sistema deverá funcionar de maneira aceitável mesmo em conexões lentas (abaixo de 1 Mbps), e ações críticas — como abertura de chamado — não podem depender de conexão de alta velocidade.
+  </p>
+ 
+  <h3>Controle de Acesso e Perfis de Usuário</h3>
+  <p>
+    Foram identificados três perfis de usuário principais: <strong>Solicitante</strong> (qualquer colaborador que abre chamados), <strong>Atendente</strong> (técnico de TI ou manutenção que executa o atendimento) e <strong>Gestor</strong> (supervisores, gerentes e diretoria). Cada perfil terá permissões distintas: o Solicitante pode abrir chamados e acompanhar os seus próprios; o Atendente pode visualizar, aceitar e encerrar chamados designados ao seu setor; o Gestor tem acesso total, incluindo relatórios e configurações de SLA.
+  </p>
+ 
+  <h3>Política de SLA (Service Level Agreement)</h3>
+  <p>
+    O SLA — Acordo de Nível de Serviço — define o prazo máximo para atendimento conforme a criticidade do chamado. O Gerente de TI e a Supervisora de Manutenção propuseram a seguinte classificação inicial, sujeita a ajuste:
+  </p>
+  <table class="info-table" style="margin-bottom:1.4rem">
+    <tr><td>Crítico</td><td>Problemas que paralisam total ou parcialmente a produção. <strong>Prazo máximo: 2 horas.</strong></td></tr>
+    <tr><td>Alto</td><td>Problemas que afetam um setor administrativo ou reduzem significativamente a produtividade. <strong>Prazo máximo: 8 horas.</strong></td></tr>
+    <tr><td>Médio</td><td>Problemas que causam inconveniente, mas não impedem o trabalho. <strong>Prazo máximo: 24 horas.</strong></td></tr>
+    <tr><td>Baixo</td><td>Solicitações de melhoria, instalação ou mudanças não urgentes. <strong>Prazo máximo: 72 horas.</strong></td></tr>
+  </table>
+  <p>
+    O sistema deverá enviar <strong>alertas automáticos</strong> ao atendente responsável e ao gestor quando 70% do prazo de SLA for consumido sem resolução, e novamente ao atingir 100% (chamado em atraso).
+  </p>
+ 
+  <hr />
+ 
+  <div class="task-box">
+    <div class="task-box-title">📋 Sua Missão: Atividade de Levantamento de Requisitos</div>
+    <ul class="task-list">
+      <li>Releia todo o texto identificando necessidades explícitas e implícitas dos stakeholders.</li>
+      <li>Elabore uma lista com <strong>exatamente 10 Requisitos Funcionais (RF)</strong> — funcionalidades que o sistema deve executar — extraídos ou inferidos a partir do texto.</li>
+      <li>Elabore uma lista com <strong>exatamente 10 Requisitos Não Funcionais (RNF)</strong> — restrições de qualidade, desempenho, segurança, usabilidade etc.</li>
+      <li>Classifique <strong>cada requisito</strong> em um dos três níveis de prioridade: <span class="badge badge-a">Essencial</span> · <span class="badge badge-b">Importante</span> · <span class="badge badge-c">Desejável</span>, justificando brevemente sua escolha.</li>
+      <li>Utilize a tabela de critérios abaixo como referência para a classificação de prioridade.</li>
+      <li>Identifique, para cada RF, qual(is) stakeholder(s) originou(aram) aquela necessidade.</li>
+    </ul>
+  </div>
+ 
+  <h3>Referência: Critérios de Classificação de Prioridade</h3>
+  <table class="crit-table">
+    <thead>
+      <tr>
+        <th>Nível</th>
+        <th>Critério</th>
+        <th>Exemplos de Indicadores</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-a">Essencial</span></td>
+        <td>O sistema não cumpre sua função principal sem este requisito. Sua ausência inviabiliza o uso.</td>
+        <td>Abertura de chamados, identificação de solicitante e atendente, controle de SLA, autenticação de usuário.</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-b">Importante</span></td>
+        <td>Agrega valor significativo e é esperado pelos usuários, mas a ausência não paralisa o sistema.</td>
+        <td>Notificações automáticas, histórico de atendimentos, dashboard gerencial, acesso mobile.</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-c">Desejável</span></td>
+        <td>Melhora a experiência ou a eficiência, mas pode ser implementado em versões futuras sem impacto crítico.</td>
+        <td>Relatórios avançados, reabertura de chamados encerrados, personalização de interface, exportação de dados.</td>
+      </tr>
+    </tbody>
+  </table>
+ 
+  <div class="nota">
+    <div class="nota-label">💡 Dica Metodológica</div>
+    <p>Nem todo requisito está escrito diretamente no texto. Analistas de sistemas precisam inferir necessidades a partir do contexto. Por exemplo: se o sistema precisa identificar automaticamente o solicitante ao abrir um chamado, isso implica um mecanismo de autenticação — que é um requisito não funcional de segurança.</p>
+  </div>
+ 
+  <div class="doc-footer">
+    <span>SENAI-SP · Material Pedagógico · Uso Educacional</span>
+    <span>SA-REQ-2024 · v1.0</span>
+  </div>
+  <div class="page-num">Página 3 de 3</div>
+</div>
+ 
+</body>
+</html>
+ 

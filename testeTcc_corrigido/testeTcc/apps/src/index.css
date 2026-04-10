@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core UI Colors */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 100% 40%;
+
+    /* Semantic Colors - Primary (Azul) */
+    --primary: 210 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Semantic Colors - Secondary (Laranja) */
+    --secondary: 33 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Semantic Colors - Accent (Verde) */
+    --accent: 145 63% 49%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Semantic Colors - Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Semantic Colors - Muted */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Semantic Colors - Card */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    /* Semantic Colors - Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Border Radius */
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Core UI Colors */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 210 100% 50%;
+
+    /* Semantic Colors - Primary (Azul) */
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Semantic Colors - Secondary (Laranja) */
+    --secondary: 33 100% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Semantic Colors - Accent (Verde) */
+    --accent: 145 63% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Semantic Colors - Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Semantic Colors - Muted */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Semantic Colors - Card */
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    /* Semantic Colors - Popover */
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: clip;
+  }
+}
+
+@layer utilities {
+  /* Smooth transitions for all interactive elements */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  /* Custom shadow utilities */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+  }
+}
